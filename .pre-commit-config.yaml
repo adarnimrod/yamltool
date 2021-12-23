@@ -1,0 +1,105 @@
+---
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks.git
+    rev: v4.0.1
+    hooks:
+      - id: check-added-large-files
+      - id: check-executables-have-shebangs
+      - id: check-merge-conflict
+      - id: check-shebang-scripts-are-executable
+      - id: check-symlinks
+      - id: check-toml
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+        exclude: \.diff$
+
+  - repo: https://github.com/codespell-project/codespell.git
+    rev: v2.1.0
+    hooks:
+      - id: codespell
+
+  - repo: https://github.com/Yelp/detect-secrets.git
+    rev: v1.1.0
+    hooks:
+      - id: detect-secrets
+
+  - repo: https://github.com/amperser/proselint.git
+    rev: 0.10.2
+    hooks:
+      - id: proselint
+        types: [plain-text]
+        exclude: LICENSE
+
+  - repo: https://gitlab.com/devopshq/gitlab-ci-linter.git
+    rev: v1.0.2
+    hooks:
+      - id: gitlab-ci-linter
+        args:
+          - "--server"
+          - https://git.shore.co.il
+
+  - repo: https://github.com/adrienverge/yamllint.git
+    rev: v1.26.3
+    hooks:
+      - id: yamllint
+
+  - repo: https://github.com/Lucas-C/pre-commit-hooks-markup.git
+    rev: v1.0.1
+    hooks:
+      - id: rst-linter
+
+  - repo: https://github.com/myint/rstcheck.git
+    rev: master
+    hooks:
+      - id: rstcheck
+
+  - repo: https://github.com/ambv/black.git
+    rev: 21.10b0
+    hooks:
+      - id: black
+        args:
+          - |
+              --line-length=79
+
+  - repo: https://github.com/PyCQA/prospector.git
+    rev: 1.5.1
+    hooks:
+      - id: prospector
+        args:
+          - |-
+            --max-line-length=79
+          - |-
+            --with-tool=pyroma
+          - |-
+            --with-tool=bandit
+          - |-
+            --without-tool=pep257
+          - |-
+            --doc-warnings
+          - |-
+            --test-warnings
+          - |-
+            --full-pep8
+          - |-
+            --strictness=high
+          - |-
+            --no-autodetect
+        additional_dependencies:
+          - bandit
+          - pyroma
+
+  - repo: https://gitlab.com/pycqa/flake8.git
+    rev: 3.9.2
+    hooks:
+      - id: flake8
+        args:
+          - |-
+            --doctests
+        additional_dependencies:
+          - flake8-bugbear
+
+  - repo: https://github.com/mgedmin/check-manifest.git
+    rev: '0.47'
+    hooks:
+      - id: check-manifest

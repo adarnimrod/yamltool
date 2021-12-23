@@ -1,0 +1,4 @@
+---
+include:
+  - project: shore/ci-stuff
+    file: templates/pre-commit.yml
