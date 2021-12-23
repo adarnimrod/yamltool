@@ -7,6 +7,26 @@ This tool provides a simple command line interface to validate and pretty-print
 YAML documents while trying to preserve as much as possible from the original
 documents (like comments and anchors).
 
+Usage
+-----
+
+.. code:: shell
+
+   usage: yt [-h] [infile] [outfile]
+
+   YAML tool, a clone of the json.tool Python module for YAML.
+
+   This tool provides a simple command line interface to validate and pretty-print
+   YAML documents while trying to preserve as much as possible from the original
+   documents (like comments and anchors).
+
+   positional arguments:
+     infile      a YAML file to be validated or pretty-printed
+     outfile     write the output of infile to outfile
+
+     optional arguments:
+       -h, --help  show this help message and exit
+
 License
 -------
 

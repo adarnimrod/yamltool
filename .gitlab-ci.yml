@@ -8,5 +8,5 @@ include:
 install-wheel:
   extends: .install-wheel
   script:
-    - python3 -m yamltool
-    - yt
+    - python3 -m yamltool -h
+    - yt -h
