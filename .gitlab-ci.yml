@@ -10,3 +10,4 @@ install-wheel:
   script:
     - python3 -m yamltool -h
     - yt -h
+    - cat .pre-commit-config.yaml .gitlab-ci.yml | yt
