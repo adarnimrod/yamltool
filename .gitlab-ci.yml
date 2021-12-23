@@ -2,3 +2,11 @@
 include:
   - project: shore/ci-stuff
     file: templates/pre-commit.yml
+  - project: shore/ci-stuff
+    file: templates/python.yml
+
+install-wheel:
+  extends: .install-wheel
+  script:
+    - python3 -m yamltool
+    - yt
