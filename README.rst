@@ -1,6 +1,10 @@
 YAML tool
 #########
 
+.. image:: https://git.shore.co.il/nimrod/yamltool/badges/main/pipeline.svg
+    :target: https://git.shore.co.il/nimrod/yamltool/-/commits/main
+    :alt: pipeline status
+
 YAML tool, a clone of the json.tool Python module for YAML.
 
 This tool provides a simple command line interface to validate and pretty-print
