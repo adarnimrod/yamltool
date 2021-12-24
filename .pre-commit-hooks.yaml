@@ -1,0 +1,8 @@
+---
+- id: yamltool
+  name: YAML tool
+  description: Validate and pretty-print YAML files.
+  language: python
+  entry: yt
+  args: ["--in-place"]
+  types: [yaml]

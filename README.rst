@@ -39,6 +39,21 @@ Usage
     Please note that specifying multiple input files will concatenate
     them, resulting in a single file that has multiple documents.
 
+pre-commit hook
+---------------
+
+YAML tool can be used as a `pre-commit <https://pre-commit.com/>` hook by
+adding the following to your :code:`.pre-commit-config.yaml` file:
+
+.. code:: yaml
+
+    ---
+    repos:
+      - repo: https://git.shore.co.il/nimrod/yamltool.git
+        rev: 0.1.0  # Check for the latest tag or run pre-commit autoupdate.
+        hooks:
+          - id: yamltool
+
 License
 -------
 
