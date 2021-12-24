@@ -53,7 +53,7 @@ repos:
       - id: black
         args:
           - |
-              --line-length=79
+            --line-length=79
 
   - repo: https://github.com/PyCQA/prospector.git
     rev: 1.5.3.1
