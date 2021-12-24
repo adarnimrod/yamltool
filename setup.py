@@ -33,7 +33,7 @@ setup(
         "Topic :: Text Processing :: Markup",
         "Topic :: Utilities",
     ],
-    keywords="yaml",
+    keywords=["yaml", "pre-commit"],
     packages=find_packages(),
     install_requires=[
         "ruamel.yaml>=0.15.0",
