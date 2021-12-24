@@ -50,7 +50,7 @@ adding the following to your :code:`.pre-commit-config.yaml` file:
     ---
     repos:
       - repo: https://git.shore.co.il/nimrod/yamltool.git
-        rev: 0.1.0  # Check for the latest tag or run pre-commit autoupdate.
+        rev: 0.1.0
         hooks:
           - id: yamltool
 
