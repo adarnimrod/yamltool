@@ -6,4 +6,4 @@ documents (like comments and anchors).
 """
 
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
