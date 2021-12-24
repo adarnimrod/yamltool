@@ -16,20 +16,28 @@ Usage
 
 .. code:: shell
 
-   usage: yt [-h] [infile] [outfile]
+    usage: yt [-h] [-i] [files ...]
 
-   YAML tool, a clone of the json.tool Python module for YAML.
+    YAML tool, a clone of the json.tool Python module for YAML.
 
-   This tool provides a simple command line interface to validate and pretty-print
-   YAML documents while trying to preserve as much as possible from the original
-   documents (like comments and anchors).
+    This tool provides a simple command line interface to validate and pretty-print
+    YAML documents while trying to preserve as much as possible from the original
+    documents (like comments and anchors).
 
-   positional arguments:
-     infile      a YAML file to be validated or pretty-printed
-     outfile     write the output of infile to outfile
+    positional arguments:
+      files           a YAML file to be validated or pretty-printed
 
-     optional arguments:
-       -h, --help  show this help message and exit
+    optional arguments:
+      -h, --help      show this help message and exit
+      -i, --in-place  Perform the pretty-print in place, overwriting the existing files.
+
+    When enabling --in-place, all files are processed as input files.
+    When --in-place is not enabled and there are more then 2 files
+    passed, the last files is considered as the output file. If you
+    wish to pretty-print multiple files and output to standard out,
+    specify the last file as "-" .
+    Please note that specifying multiple input files will concatenate
+    them, resulting in a single file that has multiple documents.
 
 License
 -------
