@@ -42,7 +42,7 @@ Usage
 pre-commit hook
 ---------------
 
-YAML tool can be used as a `pre-commit <https://pre-commit.com/>` hook by
+YAML tool can be used as a `pre-commit <https://pre-commit.com/>`_ hook by
 adding the following to your :code:`.pre-commit-config.yaml` file:
 
 .. code:: yaml
