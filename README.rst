@@ -50,7 +50,7 @@ adding the following to your :code:`.pre-commit-config.yaml` file:
     ---
     repos:
       - repo: https://git.shore.co.il/nimrod/yamltool.git
-        rev: 0.1.1
+        rev: 0.1.2
         hooks:
           - id: yamltool
 
